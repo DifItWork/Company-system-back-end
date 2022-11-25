@@ -10,7 +10,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<CrmContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("CrmDatabase")));
+builder.Services.AddDbContext<CrmContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CrmDatabase"));
+    options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+});
 builder.Services.AddScoped<Crm>();
 builder.Services.AddCors(e => { e.AddPolicy("AllowAnyOrigin", option => option.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()); });
 

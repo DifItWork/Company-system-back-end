@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\CRM",
-    "\\CRM\\DTO"
+    "\\CRM\\Controllers",
+    "\\CRM\\DTO",
+    "\\CRM\\Models"
   ],
-  "SelectedNode": "\\CRM.sln",
+  "SelectedNode": "\\CRM\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
