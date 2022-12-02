@@ -3,6 +3,7 @@ using CRM.Models;
 using CRM.Response;
 using Microsoft.EntityFrameworkCore;
 using System.Collections;
+using System.Linq;
 
 namespace CRM.Service
 {
@@ -19,7 +20,7 @@ namespace CRM.Service
                     .Select(b => new CrmDto
                     {
                         BackgroundInformation = b,
-                        BusinessExecutionStatu = _crmContext.BusinessExecutionStatus.Where(e => e.CompanyName == b.CompanyName)
+                        BusinessExecutionStatu = _crmContext.BusinessExecutionStatus.Where(e => e.CompanyName == b.CompanyName).OrderBy(a => a.Date)
                                                 .ToList()
                     });
             return res;
@@ -30,7 +31,7 @@ namespace CRM.Service
                     .Select(b => new CrmDto
                     {
                         BackgroundInformation = b,
-                        BusinessExecutionStatu = _crmContext.BusinessExecutionStatus.Where(e => e.CompanyName == b.CompanyName)
+                        BusinessExecutionStatu = _crmContext.BusinessExecutionStatus.Where(e => e.CompanyName == b.CompanyName).OrderBy(a => a.Date)
                                                .ToList()
                     });
             return res;
