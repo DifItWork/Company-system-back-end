@@ -16,34 +16,22 @@ namespace CRM.Service
         public IEnumerable GetData()  
         {
             var res = _crmContext.BackgroundInformations
-                    .Select(b => new GetCrmDto
+                    .Select(b => new CrmDto
                     {
                         BackgroundInformation = b,
-                        BusinessExecutionStatuDto = _crmContext.BusinessExecutionStatus.Where(e => e.CompanyName == b.CompanyName)
-                                                .Select(a => new BusinessExecutionStatuDto
-                                                {
-                                                    Id = a.Id,
-                                                    CompanyName = a.CompanyName,
-                                                    Date = a.Date.ToLongDateString(),
-                                                    State = a.State
-                                                }).ToList()
+                        BusinessExecutionStatu = _crmContext.BusinessExecutionStatus.Where(e => e.CompanyName == b.CompanyName)
+                                                .ToList()
                     });
             return res;
         }
         public IEnumerable GetSingleData(int id)
         {
             var res = _crmContext.BackgroundInformations.Where(e => e.Id == id)
-                    .Select(b => new GetCrmDto
+                    .Select(b => new CrmDto
                     {
                         BackgroundInformation = b,
-                        BusinessExecutionStatuDto = _crmContext.BusinessExecutionStatus.Where(e => e.CompanyName == b.CompanyName)
-                                                .Select(a => new BusinessExecutionStatuDto
-                                                {
-                                                    Id = a.Id,
-                                                    CompanyName = a.CompanyName,
-                                                    Date = a.Date.ToLongDateString(),
-                                                    State = a.State
-                                                }).ToList()
+                        BusinessExecutionStatu = _crmContext.BusinessExecutionStatus.Where(e => e.CompanyName == b.CompanyName)
+                                               .ToList()
                     });
             return res;
         }
@@ -79,10 +67,11 @@ namespace CRM.Service
             _crmContext.BusinessExecutionStatus.RemoveRange(busdata);
             _crmContext.SaveChanges();
         }
-        public void DeleteChildData(string companyName)
+        public void DeleteChildData(int id)
         {
-            var data = _crmContext.BusinessExecutionStatus.Where(e => e.CompanyName == companyName);
-            _crmContext.BusinessExecutionStatus.RemoveRange(data);
+            var data = _crmContext.BusinessExecutionStatus.SingleOrDefault(e => e.Id == id);
+            _crmContext.BusinessExecutionStatus.Remove(data);
+            _crmContext.SaveChanges();
         }
         public ResponseInfo UpdateData(CrmDto value)
         {

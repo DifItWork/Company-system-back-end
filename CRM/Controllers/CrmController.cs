@@ -44,10 +44,10 @@ namespace CRM.Controllers
         {
             _crm.DeleteData(id);
         }
-        [HttpDelete("deleteChildData/{companyName}")]
-        public void DeleteChildData(string companyName)
+        [HttpDelete("deleteChildData/{id}")]
+        public void DeleteChildData(int id)
         {
-            _crm.DeleteChildData(companyName);
+            _crm.DeleteChildData(id);
         }
         [HttpPut("updateData")]
         public ActionResult UpdateData(CrmDto value)

@@ -326,3 +326,8 @@ D:\Nick\Company-system-back-end\CRM\obj\Debug\net6.0\refint\CRM.dll
 D:\Nick\Company-system-back-end\CRM\obj\Debug\net6.0\CRM.pdb
 D:\Nick\Company-system-back-end\CRM\obj\Debug\net6.0\CRM.genruntimeconfig.cache
 D:\Nick\Company-system-back-end\CRM\obj\Debug\net6.0\ref\CRM.dll
+D:\Nick\Company-system-back-end\CRM\obj\Debug\net6.0\staticwebassets\msbuild.CRM.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Nick\Company-system-back-end\CRM\obj\Debug\net6.0\staticwebassets\msbuild.build.CRM.props
+D:\Nick\Company-system-back-end\CRM\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CRM.props
+D:\Nick\Company-system-back-end\CRM\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CRM.props
+D:\Nick\Company-system-back-end\CRM\obj\Debug\net6.0\staticwebassets.pack.json
