@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\Nick\\Company-system-back-end\\CRM\\CRM.csproj",
         "projectName": "CRM",
         "projectPath": "D:\\Nick\\Company-system-back-end\\CRM\\CRM.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\info\\.nuget\\packages\\",
         "outputPath": "D:\\Nick\\Company-system-back-end\\CRM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\info\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +61,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -73,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

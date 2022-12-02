@@ -13,7 +13,7 @@ namespace CRM.Service
         {
             _crmContext = crmContext;
         }
-        public IEnumerable GetData()
+        public IEnumerable GetData()  
         {
             var res = _crmContext.BackgroundInformations
                     .Select(b => new GetCrmDto
